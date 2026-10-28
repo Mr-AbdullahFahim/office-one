@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office One | Enterprise IT Hardware & Printing Solutions</title>
+  <meta name="description" content="Authorized dealership for Epson, Canon, HP & Zebra. Premium enterprise IT hardware, high-volume POS systems, laser printers, toners, and SLA guarantees.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NOTIFICATION & UTILITY BAR
+       ======================================================================== -->
+  <header class="top-utility-bar">
+    <div class="container">
+      <!-- Left Info -->
+      <div class="utility-group">
+        <span class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Tech Hub Flagship: Westside Innovation Ave
+        </span>
+        <span class="utility-divider"></span>
+        <span class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Showroom Hours: Mon-Sat 08:30 - 19:30
+        </span>
+      </div>
+
+      <!-- Right Contact & Gov Support -->
+      <div class="utility-group">
+        <a href="tel:+18004928324" class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Direct Desk: +1 (800) 492-TECH
+        </a>
+        <span class="utility-divider"></span>
+        <a href="#corporate" class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          Corporate & Gov Procurement
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       STICKY HEADER WRAPPER (MAIN NAV + SUB-NAV BAR KEPT VISIBLE ON SCROLL)
+       ======================================================================== -->
+  <header class="site-header-wrapper" id="siteHeaderWrapper">
+    <!-- MAIN NAVIGATION BAR -->
+    <nav class="main-header" id="mainHeader">
+      <div class="container header-inner">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-logo" aria-label="Office One Home">
+          <div class="logo-badge">01</div>
+          <div class="logo-text-block">
+            <span class="logo-title">Office One</span>
+            <span class="logo-tagline">IT SOLUTIONS PARTNER</span>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="header-search-form" id="searchForm" onsubmit="event.preventDefault();">
+          <label for="searchCategory" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Category</label>
+          <select class="search-category-select" id="searchCategory" aria-label="Search Category">
+            <option>All Hardware</option>
+            <option>Laser Printers</option>
+            <option>Thermal POS</option>
+            <option>OEM Toners</option>
+            <option>Workstations</option>
+          </select>
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search enterprise workstations, toner models..." aria-label="Search">
+          </div>
+          <span class="search-shortcut-badge">⌘K</span>
+        </form>
+
+        <!-- Action Elements -->
+        <div class="header-actions">
+          <!-- Mobile Search Toggle Button (Visible only on mobile) -->
+          <button class="header-icon-btn mobile-search-toggle" id="btnMobileSearchToggle" aria-label="Toggle Search Input">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <button class="btn-request-quote" id="btnOpenQuoteModal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Request Quote
+          </button>
+
+          <button class="header-icon-btn" id="btnCart" aria-label="View Shopping Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count-badge" id="cartBadge">0</span>
+          </button>
+
+          <button class="header-icon-btn" id="btnThemeToggle" aria-label="Toggle Dark/Light Mode">
+            <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Account Badge (Avatar at far top-right corner on mobile) -->
+          <div class="account-pill" id="btnAccount" title="Acct #4092 Enterprise Tier">
+            <div class="account-avatar" style="background: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80') center/cover;"></div>
+            <div class="account-info">
+              <span class="account-id">Acct #4092</span>
+              <span class="account-tier">Enterprise Tier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SUB-NAVIGATION BAR (ALWAYS VISIBLE & STICKY ON SCROLL) -->
+    <nav class="sub-nav-bar" id="subNavBar">
+      <div class="container">
+        <ul class="sub-nav-list">
+          <li class="sub-nav-item active"><a href="#home">Home</a></li>
+          <li class="sub-nav-item"><a href="catalog.html">Hardware Catalog</a></li>
+          <li class="sub-nav-item"><a href="#products">Printers & Copiers</a></li>
+          <li class="sub-nav-item"><a href="#toners">Ink & Toners</a></li>
+          <li class="sub-nav-item"><a href="#pos">POS Solutions</a></li>
+          <li class="sub-nav-item"><a href="#advantage">B2B Enterprise</a></li>
+          <li class="sub-nav-item"><a href="#showroom">About Store</a></li>
+          <li class="sub-nav-item"><a href="#contact">Contact & Support</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 1: HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <!-- Left Column -->
+      <div class="hero-content">
+        <div class="hero-pill-tag">
+          <span class="status-dot-green"></span>
+          TIER-1 DIRECT DISTRIBUTION HUB | Austin, TX & Nationwide Fleet Logistics
+        </div>
+
+        <h1 class="hero-title">
+          Premium IT Hardware &<br>
+          Enterprise <span class="hero-title-highlight">Printing Solutions</span>
+        </h1>
+
+        <p class="hero-description">
+          Authorized dealership for Epson, Canon, HP & Zebra. Complete workplace technology, high-volume POS systems, enterprise multi-function laser printers, genuine toners, and bespoke workstation provisioning with dedicated SLA guarantees.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#products" class="btn-primary-lg">
+            Explore Store Catalog
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button class="btn-secondary-lg" onclick="document.getElementById('btnOpenQuoteModal').click()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            Request Corporate B2B Quote
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-trust-badges">
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            100% Genuine Supplies
+          </div>
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Authorized Epson & Canon
+          </div>
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            Same-Day Local Delivery
+          </div>
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+            On-Site Tech Deployment
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Showroom Feed Mockup Card -->
+      <div class="hero-window-card">
+        <div class="window-header">
+          <div class="window-traffic-lights">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="window-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+            </svg>
+            Showroom Live Feed & Inventory
+          </span>
+          <span class="sku-ready-badge">500+ SKUs Ready</span>
+        </div>
+
+        <div class="window-image-container">
+          <img src="assets/showroom.jpg" alt="Office One Flagship Retail & Logistics Showroom">
+          <div class="window-image-overlay">
+            <div class="overlay-sub">FLAGSHIP RETAIL & LOGISTICS</div>
+            <div class="overlay-title">Walk-In Tech Demo Center</div>
+          </div>
+        </div>
+
+        <div class="window-stats-bar">
+          <div class="stat-item">
+            <div class="stat-number green-accent">12k+</div>
+            <div class="stat-label">Cartridges Stocked</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number blue-accent">&lt; 2 hrs</div>
+            <div class="stat-label">Express Dispatch</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">99.8%</div>
+            <div class="stat-label">OEM Uptime SLA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ENTERPRISE PARTNERS MARQUEE STRIP
+       ======================================================================== -->
+  <section class="partner-marquee-section">
+    <div class="container partner-marquee-inner">
+      <span class="partner-label">OFFICIAL TIER-1 ENTERPRISE PARTNER FOR:</span>
+      <div class="partner-logos-row">
+        <span class="brand-badge">EPSON <span class="pill-tag epson-tag">Master</span></span>
+        <span class="brand-badge">Canon <span class="pill-tag canon-tag">Solutions</span></span>
+        <span class="brand-badge">hp <span class="pill-tag hp-tag">LaserJet Pro</span></span>
+        <span class="brand-badge">ZEBRA <span class="pill-tag zebra-tag">POS Tech</span></span>
+        <span class="brand-badge">DELL <span class="pill-tag dell-tag">OptiPlex</span></span>
+        <span class="brand-badge">brother</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: WHY IT DIRECTORS PARTNER WITH OFFICE ONE
+       ======================================================================== -->
+  <section class="section-advantage" id="advantage">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-kicker">THE ENTERPRISE ADVANTAGE</span>
+        <h2 class="section-title">Why IT Directors Partner With Office One</h2>
+        <p class="section-subtitle">
+          We combine the responsive immediacy of a physical tech showroom with full-scale enterprise procurement infrastructure.
+        </p>
+      </div>
+
+      <div class="advantage-grid">
+        <!-- Card 1 -->
+        <div class="advantage-card">
+          <div class="advantage-icon-box icon-box-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h3 class="advantage-card-title">Guaranteed Original Consumables</h3>
+          <p class="advantage-card-text">
+            Zero third-party counterfeits or unstable remanufactured cartridges. Every toner and drum is factory sealed with manufacturer verifiable serial keys.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="advantage-card">
+          <div class="advantage-icon-box icon-box-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="advantage-card-title">Commercial AMC & Fleet Contracts</h3>
+          <p class="advantage-card-text">
+            Comprehensive Annual Maintenance Contracts that include routine preventive maintenance, toner monitoring telemetry, and free loaner printers during repairs.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="advantage-card">
+          <div class="advantage-icon-box icon-box-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="advantage-card-title">Flexible Leasing & Net-30 Terms</h3>
+          <p class="advantage-card-text">
+            Scale office tech without initial capital drain. Fast-track business credit accounts with Net-30, quarterly invoice consolidation, and cost-per-page agreements.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="advantage-card">
+          <div class="advantage-icon-box icon-box-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+            </svg>
+          </div>
+          <h3 class="advantage-card-title">Dedicated IT Field Dispatch</h3>
+          <p class="advantage-card-text">
+            Certified technicians available for on-site driver rollouts, POS register setups, network printer IP assignments, and emergency toner replenishment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: TOP-SELLING COMMERCIAL HARDWARE
+       ======================================================================== -->
+  <section class="section-products" id="products">
+    <div class="container">
+      <div class="products-header-row">
+        <div class="products-header-left">
+          <span class="section-kicker">
+            <span class="status-dot-green"></span>
+            IN-STORE STAGING & FAST FREIGHT
+          </span>
+          <h2 class="section-title">Top-Selling Commercial Hardware</h2>
+          <p class="section-subtitle">
+            Audited, sealed, and ready for immediate deployment from our Austin tech showroom.
+          </p>
+        </div>
+
+        <!-- Filter Pill Tabs -->
+        <div class="filter-tabs-group" id="filterTabs">
+          <button class="filter-tab-btn active" data-filter="all">All Inventory</button>
+          <button class="filter-tab-btn" data-filter="printers">Printers</button>
+          <button class="filter-tab-btn" data-filter="toners">OEM Toners</button>
+          <button class="filter-tab-btn" data-filter="pos">POS & Scanners</button>
+        </div>
+      </div>
+
+      <!-- 3 Product Cards Grid -->
+      <div class="products-grid" id="productGrid">
+        <!-- Product 1: Epson EcoTank Pro -->
+        <div class="product-card" data-category="printers">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-green">
+              <span class="status-dot-green"></span>
+              In Stock (Showroom)
+            </span>
+            <span class="product-sku">SKU: EP-ETM16600</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <span class="product-overlay-tag">PrecisionCore Heat-Free</span>
+            <img src="assets/epson-printer.jpg" alt="Epson EcoTank Pro ET-16600 Wide-Format">
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">EPSON COMMERCIAL FLEET</span>
+            <h3 class="product-title">EcoTank Pro ET-16600 Wide-Format</h3>
+            <p class="product-desc">
+              Wireless all-in-one printer with cartridge-free printing up to 13" x 19", dual 500-sheet paper trays, and PCL/PostScript support.
+            </p>
+
+            <div class="product-specs-box">
+              <div class="spec-cell">Speed: <strong>25 ISO ppm</strong></div>
+              <div class="spec-cell">Cost/Page: <strong class="spec-highlight-green">~2 Cents Color</strong></div>
+              <div class="spec-cell">Capacity: <strong>500 Sheets</strong></div>
+              <div class="spec-cell">Warranty: <strong>2-Yr On-Site</strong></div>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="original-price-strike">$1,199.00</span>
+                <span class="current-price">$999.00</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="EcoTank Pro ET-16600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Zebra ZD421 -->
+        <div class="product-card" data-category="pos">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-blue">
+              <span class="status-dot-green" style="background-color: #0284c7; box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);"></span>
+              B2B Exclusive Tier
+            </span>
+            <span class="product-sku">SKU: ZEB-ZD421-TT</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <span class="product-overlay-tag">300 DPI Medical/Retail</span>
+            <img src="assets/zebra-printer.jpg" alt="ZD421 4-Inch Advanced Desktop Printer">
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">ZEBRA TECHNOLOGIES</span>
+            <h3 class="product-title">ZD421 4-Inch Advanced Desktop Printer</h3>
+            <p class="product-desc">
+              Next-generation thermal transfer and direct thermal barcode engine with Ethernet, USB host, and Print DNA security architecture.
+            </p>
+
+            <div class="product-specs-box">
+              <div class="spec-cell">Resolution: <strong>300 DPI Ultra</strong></div>
+              <div class="spec-cell">Throughput: <strong>6 in/sec</strong></div>
+              <div class="spec-cell">Media Width: <strong>4.27 Inches</strong></div>
+              <div class="spec-cell">Connectivity: <strong>LAN + USB + BLE</strong></div>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="volume-rate-label">Commercial Volume Rate</span>
+                <span class="current-price">$485.00</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="Zebra ZD421 Desktop Printer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: HP 89X High-Yield Black Toner -->
+        <div class="product-card" data-category="toners">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-green">
+              <span class="status-dot-green"></span>
+              Showroom Pallet Ready
+            </span>
+            <span class="product-sku">SKU: HP-CF289X-OEM</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <span class="product-overlay-tag">100% Genuine Sealed</span>
+            <img src="assets/hp-toner.jpg" alt="HP 89X High-Yield Black Toner">
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">HP ENTERPRISE SUPPLIES</span>
+            <h3 class="product-title">HP 89X High-Yield Black Toner</h3>
+            <p class="product-desc">
+              Original HP LaserJet toner cartridge with JetIntelligence for Enterprise M507 series and MFP M528. Guaranteed tamper-proof chips.
+            </p>
+
+            <div class="product-specs-box">
+              <div class="spec-cell">Yield: <strong>10,000 Pages</strong></div>
+              <div class="spec-cell">Per Page: <strong>$0.019</strong></div>
+              <div class="spec-cell">Compatibility: <strong>M507 / M528</strong></div>
+              <div class="spec-cell">Recycling: <strong>HP Planet Partner</strong></div>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="volume-rate-label">Box of 2 Available</span>
+                <span class="current-price">$219.50</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="HP 89X High-Yield Toner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: TESTIMONIALS & TRUSTED ENTERPRISES
+       ======================================================================== -->
+  <section class="section-reviews" id="reviews">
+    <div class="container">
+      <div class="reviews-header-row">
+        <div>
+          <span class="section-kicker">PROVEN UPTIME</span>
+          <h2 class="section-title">Trusted By Hundreds of Regional Enterprises</h2>
+        </div>
+
+        <div class="rating-summary-pill">
+          <div class="rating-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <span>4.9 / 5.0 (420+ Corporate Reviews)</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div>
+            <div class="review-card-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="review-quote">
+              "Running a 40-attorney litigation firm means a printer failure during trial prep is a catastrophe. Office One replaced our entire copy room with Canon imageCLASS multi-functions and set up automatic HP toner replenishments. We haven't had a single hour of downtime in 18 months."
+            </p>
+          </div>
+
+          <div class="review-author-row">
+            <div class="author-initials-badge">MH</div>
+            <div class="author-info-block">
+              <span class="author-name">Marcus H. Vance</span>
+              <span class="author-role">Managing Partner, Vance & Sterling LLP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div>
+            <div class="review-card-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="review-quote">
+              "We walked into their physical flagship showroom on a Thursday morning when our warehouse thermal scanners failed. The team calibrated six Zebra ZD421 barcode engines right at their tech counter and loaded them into our van within two hours. Exceptional service."
+            </p>
+          </div>
+
+          <div class="review-author-row">
+            <div class="author-initials-badge badge-blue-initials">DL</div>
+            <div class="author-info-block">
+              <span class="author-name">Devin Lin</span>
+              <span class="author-role">Director of Logistics, Apex Retail Group</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div>
+            <div class="review-card-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="review-quote">
+              "Switching our administrative departments to Epson EcoTank WorkForce machines reduced our monthly consumables spend by 65%. Getting genuine consumables with certified serial authentication protects our warranties completely."
+            </p>
+          </div>
+
+          <div class="review-author-row">
+            <div class="author-initials-badge badge-teal-initials">SK</div>
+            <div class="author-info-block">
+              <span class="author-name">Dr. Sarah Koehn</span>
+              <span class="author-role">Chief Operations Officer, Crestview Academy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5: VISIT SHOWROOM & LOCATION
+       ======================================================================== -->
+  <section class="section-showroom-visit" id="showroom">
+    <div class="container showroom-visit-grid">
+      <!-- Left Column: Location Info & WhatsApp -->
+      <div class="showroom-visit-info">
+        <div>
+          <span class="section-kicker">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            PHYSICAL AUSTIN LOCATION
+          </span>
+          <h2 class="section-title">Visit Our Technology Showroom Today</h2>
+          <p class="section-subtitle">
+            Experience tactile comparisons before purchasing. Our commercial hardware leads demonstrate print speed, consumable yield, and network connectivity in real time.
+          </p>
+        </div>
+
+        <!-- Info Box 1: Address -->
+        <div class="info-card-box">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="info-card-content">
+            <h4 class="info-card-title">Commercial Address & Warehouse</h4>
+            <div class="info-card-line">Office One Tech Center, Bldg 4</div>
+            <div class="info-card-line">920 Industrial Commerce Parkway, Austin, TX 78759</div>
+            <span class="info-card-tag">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              Free Commercial Vehicle & Flatbed Truck Parking
+            </span>
+          </div>
+        </div>
+
+        <!-- Info Box 2: Hours -->
+        <div class="info-card-box">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="info-card-content">
+            <h4 class="info-card-title">Operating Hours</h4>
+            <div class="info-card-line"><strong>Monday - Friday:</strong> 08:30 – 19:30 CST</div>
+            <div class="info-card-line"><strong>Saturday:</strong> 09:00 – 17:00 CST</div>
+            <div class="info-card-line" style="color: var(--text-muted); font-size: 12.5px;">Sunday: Closed for maintenance and fleet staging</div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Specialist CTA -->
+        <div class="whatsapp-cta-banner">
+          <div class="whatsapp-left-block">
+            <div class="whatsapp-icon-circle">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.969.57 3.805 1.554 5.352L2.094 22l4.757-1.422a10.01 10.01 0 0 0 5.18 1.453c5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm5.836 14.188c-.242.684-1.21 1.258-1.742 1.344-.484.078-1.117.14-3.235-.742-2.71-1.125-4.453-3.875-4.586-4.055-.133-.18-1.07-1.43-1.07-2.727s.672-1.938.914-2.195c.242-.258.531-.32.71-.32.18 0 .352.008.508.016.164.008.383-.063.6.461.227.547.773 1.883.844 2.023.07.14.117.305.023.484-.094.18-.14.29-.281.453-.14.164-.297.367-.422.492-.14.14-.289.297-.125.578.164.281.727 1.203 1.563 1.945 1.078.961 1.984 1.258 2.266 1.398.281.14.445.117.609-.07.164-.188.703-.82.891-1.102.188-.281.375-.234.633-.14.258.094 1.64.773 1.922.914.281.14.469.211.539.328.07.117.07.68-.172 1.364z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="whatsapp-text-title">Direct WhatsApp Specialist</div>
+              <div class="whatsapp-text-desc">Instant stock check, invoice quotes & serial confirmation.</div>
+            </div>
+          </div>
+          <a href="https://wa.me/18004928324" target="_blank" rel="noopener" class="btn-whatsapp-chat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Chat with Store
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Austin Map Card -->
+      <div class="austin-map-card">
+        <img src="assets/austin-map.jpg" alt="Office One Austin Tech Hub GPS Map">
+        <div class="map-floating-bottom-bar">
+          <div>
+            <div class="map-bar-title">Austin Tech Hub Staging Center</div>
+            <div class="map-bar-sub">Exit 248 toward Industrial Pkwy</div>
+          </div>
+          <a href="https://maps.google.com/?q=Austin+TX+78759" target="_blank" rel="noopener" class="btn-open-gps">
+            Open in GPS
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       AUTHORIZED DIRECT TIER-1 DISTRIBUTOR RIBBON
+       ======================================================================== -->
+  <section class="distributor-ribbon">
+    <div class="container distributor-inner">
+      <div class="distributor-left">
+        <div class="distributor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
+        <div>
+          <div class="distributor-title">Authorized Direct Tier-1 Distributor</div>
+          <div class="distributor-sub">Genuine products covered by manufacturer official global warranty</div>
+        </div>
+      </div>
+
+      <div class="distributor-brand-list">
+        <span>HP ENTERPRISE</span>
+        <span>•</span>
+        <span>CANON SOLUTIONS</span>
+        <span>•</span>
+        <span>EPSON MASTER</span>
+        <span>•</span>
+        <span>ZEBRA TECHNOLOGIES</span>
+        <span>•</span>
+        <span>DELL PRO</span>
+        <span>•</span>
+        <span>ASUS COMMERCIAL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-columns-grid">
+        <!-- Col 1: About & Guarantee -->
+        <div class="footer-col">
+          <a href="#" class="brand-logo" style="margin-bottom: 4px;">
+            <div class="logo-badge">01</div>
+            <div class="logo-text-block">
+              <span class="logo-title">Office One</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Premier enterprise IT equipment vendor, commercial laser fleet partner, POS automation provider, and on-site integration specialists since 2011.
+          </p>
+
+          <div class="footer-guarantee-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            <div>
+              <strong>Certified Setup Guarantee</strong><br>
+              All enterprise bundles include on-site deployment calibration & 3-year priority SLA response.
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Walk-In Showroom -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">WALK-IN SHOWROOM</h4>
+          <ul class="footer-info-list">
+            <li class="footer-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>
+                <strong>Office One Tech Center, Bldg 4</strong><br>
+                920 Industrial Commerce Parkway<br>
+                Austin, TX 78759
+              </span>
+            </li>
+            <li class="footer-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>Loading Dock B (Bulk Commercial Pickups)</span>
+            </li>
+            <li class="footer-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>
+                <strong>Walk-In Demonstrations & Print Benchmarks:</strong><br>
+                Monday - Friday: 08:30 - 18:30 CST
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Procurement & Support -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">PROCUREMENT & SUPPORT</h4>
+          <ul class="footer-links-list">
+            <li><a href="#quote">Enterprise Credit Lines & Net-30</a></li>
+            <li><a href="#mps">Managed Print Service (MPS) Contracts</a></li>
+            <li><a href="#drivers">POS Hardware Driver Central</a></li>
+            <li><a href="#workstations">Refurbished Certified Workstations</a></li>
+            <li><a href="#rma">Warranty Registration & RMA Portal</a></li>
+            <li><a href="#dispatch">Field Technician Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: B2B Bulletin & Fleet Rates -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">B2B BULLETIN & FLEET RATES</h4>
+          <p class="footer-newsletter-text">
+            Receive weekly commercial hardware surplus listings, OEM rebate notifications, and enterprise volume tier alerts.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault();">
+            <input type="email" class="newsletter-input" placeholder="procurement@company.com" required aria-label="Work Email Address">
+            <button type="submit" class="btn-newsletter-submit">Subscribe</button>
+          </form>
+
+          <div class="newsletter-privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            Zero spam. Confidential corporate communications only.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Footer Legal & Compliance -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2025 Office One Solutions Inc. All rights reserved. Registered Federal Commercial Supplier.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Sale</a>
+          <a href="#">SLA Agreements</a>
+          <a href="#">Compliance & ISO-27001</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       LIVE DEMO INTERACTIVE MODALS & TOAST
+       ======================================================================== -->
+  <!-- Request Corporate Quote Modal -->
+  <div class="demo-modal-backdrop" id="quoteModal">
+    <div class="demo-modal-window">
+      <div class="demo-modal-header">
+        <h3>Request Corporate B2B Quote</h3>
+        <button class="modal-close-btn" id="btnCloseQuoteModal" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="demo-modal-body">
+        <form id="corporateQuoteForm" onsubmit="event.preventDefault();">
+          <div class="modal-form-group">
+            <label class="modal-label">Organization Name</label>
+            <input type="text" class="modal-input" placeholder="e.g. Apex Retail Group" required>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-label">Work Email (Net-30 Eligible)</label>
+            <input type="email" class="modal-input" placeholder="procurement@yourdomain.com" required>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-label">Procurement Scope</label>
+            <select class="modal-input">
+              <option>Enterprise Multifunction Fleet (10+ Units)</option>
+              <option>Warehouse POS & Barcode Engines</option>
+              <option>Scheduled OEM Toner Replenishment</option>
+              <option>Bespoke Workstation Provisioning</option>
+            </select>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-label">Target Deployment Date & Notes</label>
+            <textarea class="modal-textarea" rows="3" placeholder="Specify timeline, desired SLA tier, or dock delivery requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary-lg" style="width: 100%; justify-content: center; margin-top: 10px;">
+            Submit RFP / Instant Quote Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toastNotice">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toastMessage">Item reserved successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

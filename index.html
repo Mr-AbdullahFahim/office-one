@@ -12,6 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <!-- Instant Theme Sync Initializer (Prevents FOUC) -->
+  <script>
+    (function() {
+      try {
+        if (localStorage.getItem('office_one_theme') === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -150,6 +160,7 @@
           <li class="sub-nav-item active"><a href="#home">Home</a></li>
           <li class="sub-nav-item"><a href="catalog.html">Hardware Catalog</a></li>
           <li class="sub-nav-item"><a href="#products">Printers & Copiers</a></li>
+          <li class="sub-nav-item"><a href="#featured">Featured & Arrivals</a></li>
           <li class="sub-nav-item"><a href="#toners">Ink & Toners</a></li>
           <li class="sub-nav-item"><a href="#pos">POS Solutions</a></li>
           <li class="sub-nav-item"><a href="#advantage">B2B Enterprise</a></li>
@@ -395,7 +406,7 @@
         </div>
       </div>
 
-      <!-- 3 Product Cards Grid -->
+      <!-- 4 Product Cards Grid -->
       <div class="products-grid" id="productGrid">
         <!-- Product 1: Epson EcoTank Pro -->
         <div class="product-card" data-category="printers">
@@ -408,8 +419,8 @@
           </div>
 
           <div class="product-image-canvas">
-            <span class="product-overlay-tag">PrecisionCore Heat-Free</span>
             <img src="assets/epson-printer.jpg" alt="Epson EcoTank Pro ET-16600 Wide-Format">
+            <span class="product-overlay-tag">PrecisionCore Heat-Free</span>
           </div>
 
           <div class="product-card-body">
@@ -419,17 +430,10 @@
               Wireless all-in-one printer with cartridge-free printing up to 13" x 19", dual 500-sheet paper trays, and PCL/PostScript support.
             </p>
 
-            <div class="product-specs-box">
-              <div class="spec-cell">Speed: <strong>25 ISO ppm</strong></div>
-              <div class="spec-cell">Cost/Page: <strong class="spec-highlight-green">~2 Cents Color</strong></div>
-              <div class="spec-cell">Capacity: <strong>500 Sheets</strong></div>
-              <div class="spec-cell">Warranty: <strong>2-Yr On-Site</strong></div>
-            </div>
-
             <div class="product-card-footer">
               <div class="price-block">
-                <span class="original-price-strike">$1,199.00</span>
-                <span class="current-price">$999.00</span>
+                <span class="original-price-strike">LKR 365,000</span>
+                <span class="current-price">LKR 305,000</span>
               </div>
               <button class="btn-reserve-pickup" data-name="EcoTank Pro ET-16600">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -454,8 +458,8 @@
           </div>
 
           <div class="product-image-canvas">
-            <span class="product-overlay-tag">300 DPI Medical/Retail</span>
             <img src="assets/zebra-printer.jpg" alt="ZD421 4-Inch Advanced Desktop Printer">
+            <span class="product-overlay-tag">300 DPI Medical/Retail</span>
           </div>
 
           <div class="product-card-body">
@@ -465,17 +469,10 @@
               Next-generation thermal transfer and direct thermal barcode engine with Ethernet, USB host, and Print DNA security architecture.
             </p>
 
-            <div class="product-specs-box">
-              <div class="spec-cell">Resolution: <strong>300 DPI Ultra</strong></div>
-              <div class="spec-cell">Throughput: <strong>6 in/sec</strong></div>
-              <div class="spec-cell">Media Width: <strong>4.27 Inches</strong></div>
-              <div class="spec-cell">Connectivity: <strong>LAN + USB + BLE</strong></div>
-            </div>
-
             <div class="product-card-footer">
               <div class="price-block">
                 <span class="volume-rate-label">Commercial Volume Rate</span>
-                <span class="current-price">$485.00</span>
+                <span class="current-price">LKR 148,000</span>
               </div>
               <button class="btn-reserve-pickup" data-name="Zebra ZD421 Desktop Printer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -500,8 +497,8 @@
           </div>
 
           <div class="product-image-canvas">
-            <span class="product-overlay-tag">100% Genuine Sealed</span>
             <img src="assets/hp-toner.jpg" alt="HP 89X High-Yield Black Toner">
+            <span class="product-overlay-tag">100% Genuine Sealed</span>
           </div>
 
           <div class="product-card-body">
@@ -511,19 +508,238 @@
               Original HP LaserJet toner cartridge with JetIntelligence for Enterprise M507 series and MFP M528. Guaranteed tamper-proof chips.
             </p>
 
-            <div class="product-specs-box">
-              <div class="spec-cell">Yield: <strong>10,000 Pages</strong></div>
-              <div class="spec-cell">Per Page: <strong>$0.019</strong></div>
-              <div class="spec-cell">Compatibility: <strong>M507 / M528</strong></div>
-              <div class="spec-cell">Recycling: <strong>HP Planet Partner</strong></div>
-            </div>
-
             <div class="product-card-footer">
               <div class="price-block">
                 <span class="volume-rate-label">Box of 2 Available</span>
-                <span class="current-price">$219.50</span>
+                <span class="current-price">LKR 67,000</span>
               </div>
               <button class="btn-reserve-pickup" data-name="HP 89X High-Yield Toner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Canon imageCLASS MF645Cx -->
+        <div class="product-card" data-category="printers">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-green">
+              <span class="status-dot-green"></span>
+              In Stock (Showroom)
+            </span>
+            <span class="product-sku">SKU: CN-MF645CX-OEM</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <img src="assets/canon-printer.jpg" alt="Canon imageCLASS MF645Cx Laser Multifunction">
+            <span class="product-overlay-tag">Color Laser Pro Fleet</span>
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">CANON ENTERPRISE FLEET</span>
+            <h3 class="product-title">imageCLASS MF645Cx Color Laser All-in-One</h3>
+            <p class="product-desc">
+              High-yield commercial multifunction color laser printer with single-pass duplex scanning, 5-inch color touchscreen, and Application Library shortcuts.
+            </p>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="original-price-strike">LKR 145,000</span>
+                <span class="current-price">LKR 128,000</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="Canon imageCLASS MF645Cx">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3B: FEATURED PRODUCTS & NEW ARRIVALS
+       ======================================================================== -->
+  <section class="section-products section-featured-arrivals" id="featured">
+    <div class="container">
+      <div class="products-header-row">
+        <div class="products-header-left">
+          <span class="section-kicker">
+            <span class="status-dot-green"></span>
+            NEW ARRIVALS & WORKSTATION FLEET
+          </span>
+          <h2 class="section-title">Featured Products & New Arrivals</h2>
+          <p class="section-subtitle">
+            Enterprise-grade laptops, high-performance desktop towers, and 4K productivity monitors calibrated for corporate fleet deployment.
+          </p>
+        </div>
+
+        <!-- Filter Pill Tabs -->
+        <div class="filter-tabs-group" id="featuredFilterTabs">
+          <button class="filter-tab-btn active" data-featured-filter="all">All Hardware</button>
+          <button class="filter-tab-btn" data-featured-filter="laptops">Laptops</button>
+          <button class="filter-tab-btn" data-featured-filter="desktops">Desktop PCs</button>
+          <button class="filter-tab-btn" data-featured-filter="monitors">Monitors</button>
+        </div>
+      </div>
+
+      <!-- 4 Product Cards Grid -->
+      <div class="products-grid" id="featuredGrid">
+        <!-- Product 1: Dell Latitude 7440 Ultrabook -->
+        <div class="product-card" data-featured-category="laptops">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-green">
+              <span class="status-dot-green"></span>
+              New Arrival 2025
+            </span>
+            <span class="product-sku">SKU: DEL-LAT7440-PRO</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&h=450&q=80" alt="Dell Latitude 7440 14-Inch Commercial Ultrabook">
+            <span class="product-overlay-tag">Intel Core i7-1365U vPro</span>
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">DELL COMMERCIAL FLEET</span>
+            <h3 class="product-title">Dell Latitude 7440 14" Ultrabook vPro</h3>
+            <p class="product-desc">
+              Ultralight enterprise notebook with Intel Iris Xe, dual-array noise cancellation mics, and ExpressConnect simultaneous multi-network bonding.
+            </p>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="original-price-strike">LKR 580,000</span>
+                <span class="current-price">LKR 475,000</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="Dell Latitude 7440 Ultrabook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Dell OptiPlex 7010 Micro Desktop -->
+        <div class="product-card" data-featured-category="desktops">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-blue">
+              <span class="status-dot-green" style="background-color: #0284c7; box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);"></span>
+              Showroom Ready
+            </span>
+            <span class="product-sku">SKU: DEL-OPT7010-MCR</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=600&h=450&q=80" alt="Dell OptiPlex 7010 Micro Commercial Desktop Workstation">
+            <span class="product-overlay-tag">Ultra-Compact Form Factor</span>
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">DELL ENTERPRISE WORKSTATIONS</span>
+            <h3 class="product-title">Dell OptiPlex 7010 Micro Desktop PC</h3>
+            <p class="product-desc">
+              Space-saving enterprise desktop with full desktop-class processing power, dual DisplayPort 4K outputs, and silent mag-lev cooling architecture.
+            </p>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="volume-rate-label">Commercial Fleet Pricing</span>
+                <span class="current-price">LKR 275,000</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="Dell OptiPlex 7010 Micro PC">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Dell UltraSharp 32" 4K USB-C Hub Monitor -->
+        <div class="product-card" data-featured-category="monitors">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-green">
+              <span class="status-dot-green"></span>
+              Top Spec Display
+            </span>
+            <span class="product-sku">SKU: DEL-U3223QE-4K</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&h=450&q=80" alt="Dell UltraSharp U3223QE 32-Inch 4K USB-C Hub Monitor">
+            <span class="product-overlay-tag">IPS Black 2000:1 Contrast</span>
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">DELL ULTRASHARP DISPLAYS</span>
+            <h3 class="product-title">Dell UltraSharp U3223QE 32" 4K Hub Monitor</h3>
+            <p class="product-desc">
+              Premier 31.5-inch 4K UHD display with IPS Black technology, integrated RJ45 Gigabit Ethernet, and 90W USB-C single-cable dock charging.
+            </p>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="original-price-strike">LKR 285,000</span>
+                <span class="current-price">LKR 235,000</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="Dell UltraSharp 32-inch 4K Monitor">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Reserve & Pick Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Lenovo ThinkPad X1 Carbon Gen 11 -->
+        <div class="product-card" data-featured-category="laptops">
+          <div class="product-card-top">
+            <span class="product-badge-pill badge-blue">
+              <span class="status-dot-green" style="background-color: #0284c7; box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);"></span>
+              B2B Exclusive Tier
+            </span>
+            <span class="product-sku">SKU: LEN-X1C11-B2B</span>
+          </div>
+
+          <div class="product-image-canvas">
+            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&h=450&q=80" alt="Lenovo ThinkPad X1 Carbon Gen 11 Enterprise Laptop">
+            <span class="product-overlay-tag">Carbon Fiber Chassis 1.12kg</span>
+          </div>
+
+          <div class="product-card-body">
+            <span class="product-brand">LENOVO THINKPAD BUSINESS</span>
+            <h3 class="product-title">Lenovo ThinkPad X1 Carbon Gen 11 Flagship</h3>
+            <p class="product-desc">
+              Legendary carbon-fiber business laptop built for grueling mobile work. Rapid charge to 80% in 60 minutes with Computer Vision human presence locks.
+            </p>
+
+            <div class="product-card-footer">
+              <div class="price-block">
+                <span class="original-price-strike">LKR 595,000</span>
+                <span class="current-price">LKR 495,000</span>
+              </div>
+              <button class="btn-reserve-pickup" data-name="Lenovo ThinkPad X1 Carbon Gen 11">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                   <line x1="3" y1="6" x2="21" y2="6"></line>

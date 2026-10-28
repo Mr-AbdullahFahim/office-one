@@ -12,6 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <!-- Instant Theme Sync Initializer (Prevents FOUC) -->
+  <script>
+    (function() {
+      try {
+        if (localStorage.getItem('office_one_theme') === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -229,14 +239,31 @@
          CATALOG MAIN LAYOUT (SIDEBAR + PRODUCT GRID)
          ======================================================================== -->
     <div class="catalog-main-layout">
+      <!-- MOBILE FILTER TOGGLE BAR (Visible on <= 992px) -->
+      <button class="mobile-filter-toggle-btn" id="btnMobileFilterToggle" aria-expanded="false" aria-controls="catalogSidebar">
+        <div class="mobile-filter-toggle-left">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+          <span>Filter Specifications</span>
+        </div>
+        <div class="mobile-filter-toggle-right">
+          <span class="mobile-filter-hint" id="mobileFilterHint">Show Filters</span>
+          <svg class="toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </button>
+
       <!-- LEFT SIDEBAR: FILTERS -->
-      <aside class="catalog-sidebar">
+      <aside class="catalog-sidebar" id="catalogSidebar">
         <div class="filter-header-row">
           <div class="filter-header-title">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
             Filter Specs
           </div>
-          <span class="btn-reset-filters" id="btnResetFilters">Reset All</span>
+          <div class="filter-header-actions">
+            <span class="btn-reset-filters" id="btnResetFilters">Reset All</span>
+            <button class="btn-close-mobile-sidebar" id="btnCloseMobileFilter" aria-label="Close Filter Menu">&times;</button>
+          </div>
         </div>
 
         <!-- Flagship Showroom Toggle -->
@@ -396,12 +423,12 @@
           <div class="price-range-slider-wrap">
             <div class="price-range-header">
               <span>PRICE RANGE</span>
-              <span id="priceDisplay">$45 — $1,199</span>
+              <span id="priceDisplay">LKR 14,000 — LKR 365,000</span>
             </div>
-            <input type="range" class="price-slider-input" min="45" max="1199" value="1199" id="priceRangeInput">
+            <input type="range" class="price-slider-input" min="14000" max="365000" step="1000" value="365000" id="priceRangeInput">
             <div class="price-slider-limits">
-              <span>Min: $45</span>
-              <span>Max: $1,199</span>
+              <span>Min: LKR 14,000</span>
+              <span>Max: LKR 365,000</span>
             </div>
           </div>
         </div>
@@ -419,6 +446,13 @@
             <span class="warranty-badge-pill">ISO-9001</span>
             <span class="warranty-badge-pill">OEM Certified</span>
           </div>
+        </div>
+
+        <!-- Mobile Apply Filter Action (Visible on mobile <= 992px) -->
+        <div class="mobile-apply-filter-bar">
+          <button class="btn-apply-mobile-filter" id="btnApplyMobileFilter">
+            Apply Filters & View Results
+          </button>
         </div>
       </aside>
 
@@ -494,8 +528,8 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$389.00</span>
-                    <span class="catalog-price-strike">$429.00</span>
+                    <span class="catalog-price-val">LKR 118,500</span>
+                    <span class="catalog-price-strike">LKR 130,500</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 In Stock</span>
                 </div>
@@ -536,7 +570,7 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$420.00</span>
+                    <span class="catalog-price-val">LKR 128,000</span>
                     <span style="font-size: 11px; color: var(--text-muted); margin-left: 4px;">Floor 1 Unit</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 8+ Units</span>
@@ -578,7 +612,7 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$499.00</span>
+                    <span class="catalog-price-val">LKR 152,000</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 12+ In Stock</span>
                 </div>
@@ -619,7 +653,7 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$68.00</span>
+                    <span class="catalog-price-val">LKR 20,500</span>
                     <span style="font-size: 11px; color: var(--text-muted);">/ unit</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 45+ In Stock</span>
@@ -661,7 +695,7 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$72.00</span>
+                    <span class="catalog-price-val">LKR 22,000</span>
                     <span style="font-size: 11px; color: var(--text-muted);">/ unit</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 60+ In Stock</span>
@@ -703,7 +737,7 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$265.00</span>
+                    <span class="catalog-price-val">LKR 81,000</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 19 In Stock</span>
                 </div>
@@ -744,7 +778,7 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$115.00</span>
+                    <span class="catalog-price-val">LKR 35,000</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 In Stock</span>
                 </div>
@@ -785,8 +819,8 @@
               <div class="catalog-card-bottom">
                 <div class="catalog-price-row">
                   <div>
-                    <span class="catalog-price-val">$45.00</span>
-                    <span class="catalog-price-strike">$52.00</span>
+                    <span class="catalog-price-val">LKR 14,000</span>
+                    <span class="catalog-price-strike">LKR 16,000</span>
                   </div>
                   <span class="catalog-stock-indicator">🟢 80+ In Stock</span>
                 </div>

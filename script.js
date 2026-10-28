@@ -62,16 +62,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Product Category Filter Tabs
-  filterTabs.forEach((tab) => {
+  // 4a. Top-Selling Commercial Hardware Filter Tabs
+  const hardwareTabs = document.querySelectorAll('#filterTabs .filter-tab-btn');
+  const hardwareCards = document.querySelectorAll('#productGrid .product-card');
+
+  hardwareTabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
+      hardwareTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
       const filterValue = tab.getAttribute('data-filter');
 
-      productCards.forEach((card) => {
+      hardwareCards.forEach((card) => {
         const category = card.getAttribute('data-category');
+        if (filterValue === 'all' || category === filterValue) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeIn 0.3s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 4b. Featured Products & New Arrivals Filter Tabs
+  const featuredTabs = document.querySelectorAll('#featuredFilterTabs .filter-tab-btn');
+  const featuredCards = document.querySelectorAll('#featuredGrid .product-card');
+
+  featuredTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      featuredTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filterValue = tab.getAttribute('data-featured-filter');
+
+      featuredCards.forEach((card) => {
+        const category = card.getAttribute('data-featured-category');
         if (filterValue === 'all' || category === filterValue) {
           card.style.display = 'flex';
           card.style.animation = 'fadeIn 0.3s ease forwards';
@@ -146,12 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 9. Price Range Slider
+  // 9. Price Range Slider (in LKR)
   const priceRangeInput = document.getElementById('priceRangeInput');
   const priceDisplay = document.getElementById('priceDisplay');
   if (priceRangeInput && priceDisplay) {
     priceRangeInput.addEventListener('input', () => {
-      priceDisplay.textContent = `$45 — $${parseInt(priceRangeInput.value, 10).toLocaleString()}`;
+      priceDisplay.textContent = `LKR 14,000 — LKR ${parseInt(priceRangeInput.value, 10).toLocaleString()}`;
     });
   }
 
@@ -162,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (flagshipToggle) flagshipToggle.classList.remove('active');
       if (priceRangeInput && priceDisplay) {
         priceRangeInput.value = priceRangeInput.max;
-        priceDisplay.textContent = `$45 — $${parseInt(priceRangeInput.max, 10).toLocaleString()}`;
+        priceDisplay.textContent = `LKR 14,000 — LKR ${parseInt(priceRangeInput.max, 10).toLocaleString()}`;
       }
       document.querySelectorAll('.filter-checkbox-wrap input').forEach(cb => {
         cb.checked = true;
@@ -233,6 +259,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 13c. Mobile Filter Drawer / Toggle on catalog.html
+  const btnMobileFilterToggle = document.getElementById('btnMobileFilterToggle');
+  const catalogSidebar = document.getElementById('catalogSidebar');
+  const btnCloseMobileFilter = document.getElementById('btnCloseMobileFilter');
+  const btnApplyMobileFilter = document.getElementById('btnApplyMobileFilter');
+  const mobileFilterHint = document.getElementById('mobileFilterHint');
+
+  if (btnMobileFilterToggle && catalogSidebar) {
+    btnMobileFilterToggle.addEventListener('click', () => {
+      const isOpen = catalogSidebar.classList.toggle('mobile-open');
+      btnMobileFilterToggle.classList.toggle('active', isOpen);
+      btnMobileFilterToggle.setAttribute('aria-expanded', isOpen);
+      if (mobileFilterHint) {
+        mobileFilterHint.textContent = isOpen ? 'Hide Filters' : 'Show Filters';
+      }
+    });
+
+    if (btnCloseMobileFilter) {
+      btnCloseMobileFilter.addEventListener('click', () => {
+        catalogSidebar.classList.remove('mobile-open');
+        btnMobileFilterToggle.classList.remove('active');
+        btnMobileFilterToggle.setAttribute('aria-expanded', 'false');
+        if (mobileFilterHint) mobileFilterHint.textContent = 'Show Filters';
+      });
+    }
+
+    if (btnApplyMobileFilter) {
+      btnApplyMobileFilter.addEventListener('click', () => {
+        catalogSidebar.classList.remove('mobile-open');
+        btnMobileFilterToggle.classList.remove('active');
+        btnMobileFilterToggle.setAttribute('aria-expanded', 'false');
+        if (mobileFilterHint) mobileFilterHint.textContent = 'Show Filters';
+        showToast('Filters applied');
+        const catalogToolbar = document.querySelector('.catalog-toolbar-row') || document.querySelector('.catalog-products-grid');
+        if (catalogToolbar) {
+          catalogToolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  }
+
   // 14. Corporate Quote Modal Handling
   if (btnOpenQuoteModal && quoteModal && btnCloseQuoteModal) {
     btnOpenQuoteModal.addEventListener('click', () => {
@@ -268,13 +335,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 16. Dark / Light Mode Toggle
-  if (btnThemeToggle && themeIcon) {
-    btnThemeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
+  // 16. Dark / Light Mode Toggle with Real-Time Cross-Page Sync & LocalStorage
+  const THEME_STORAGE_KEY = 'office_one_theme';
 
-      if (isDark) {
+  function setTheme(theme, showFeedback = false) {
+    const isDark = theme === 'dark';
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+      if (document.documentElement) document.documentElement.classList.add('dark-mode');
+      if (themeIcon) {
         themeIcon.innerHTML = `
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -286,15 +355,46 @@ document.addEventListener('DOMContentLoaded', () => {
           <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         `;
-        showToast('Switched to Dark Mode');
-      } else {
+      }
+      if (showFeedback) showToast('Switched to Dark Mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+      if (document.documentElement) document.documentElement.classList.remove('dark-mode');
+      if (themeIcon) {
         themeIcon.innerHTML = `
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         `;
-        showToast('Switched to Light Mode');
       }
+      if (showFeedback) showToast('Switched to Light Mode');
+    }
+  }
+
+  // Restore saved theme on page load
+  try {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    setTheme(savedTheme, false);
+  } catch (e) {
+    console.warn('LocalStorage unavailable for theme persistence', e);
+  }
+
+  // Toggle button click listener
+  if (btnThemeToggle) {
+    btnThemeToggle.addEventListener('click', () => {
+      const isCurrentlyDark = document.body.classList.contains('dark-mode');
+      const targetTheme = isCurrentlyDark ? 'light' : 'dark';
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, targetTheme);
+      } catch (e) {}
+      setTheme(targetTheme, true);
     });
   }
+
+  // Real-time synchronization across browser tabs/pages
+  window.addEventListener('storage', (e) => {
+    if (e.key === THEME_STORAGE_KEY) {
+      setTheme(e.newValue || 'light', false);
+    }
+  });
 
   // 17. Interactive Category Pills in Subnav
   const subNavLinks = document.querySelectorAll('.sub-nav-item');

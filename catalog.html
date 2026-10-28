@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware, Commercial Printers & Toners | Office One Solutions</title>
+  <meta name="description" content="Direct OEM distribution pricing for commercial offices, point-of-sale setups, and managed print fleets. Epson, Canon, HP, Zebra.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NOTIFICATION & UTILITY BAR
+       ======================================================================== -->
+  <header class="top-utility-bar">
+    <div class="container">
+      <div class="utility-group">
+        <span class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Tech Hub Flagship: Westside Innovation Ave
+        </span>
+        <span class="utility-divider"></span>
+        <span class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Showroom Hours: Mon-Sat 08:30 - 19:30
+        </span>
+      </div>
+
+      <div class="utility-group">
+        <a href="tel:+18004928324" class="utility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Direct Desk: +1 (800) 492-TECH
+        </a>
+        <span class="utility-divider"></span>
+        <a href="#quoteModal" class="utility-item" onclick="document.getElementById('btnOpenQuoteModal').click()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          Corporate & Gov Procurement
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       STICKY HEADER WRAPPER (MAIN NAV + SUB-NAV BAR KEPT VISIBLE ON SCROLL)
+       ======================================================================== -->
+  <header class="site-header-wrapper" id="siteHeaderWrapper">
+    <!-- MAIN NAVIGATION BAR -->
+    <nav class="main-header" id="mainHeader">
+      <div class="container header-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Office One Home">
+          <div class="logo-badge">01</div>
+          <div class="logo-text-block">
+            <span class="logo-title">Office One</span>
+            <span class="logo-tagline">IT SOLUTIONS PARTNER</span>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="header-search-form" id="searchForm" onsubmit="event.preventDefault();">
+          <label for="searchCategory" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Category</label>
+          <select class="search-category-select" id="searchCategory" aria-label="Search Category">
+            <option>All Hardware</option>
+            <option>Laser Printers</option>
+            <option>Thermal POS</option>
+            <option>OEM Toners</option>
+            <option>Workstations</option>
+          </select>
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search enterprise workstations, toner models..." aria-label="Search">
+          </div>
+          <span class="search-shortcut-badge">⌘K</span>
+        </form>
+
+        <!-- Action Elements -->
+        <div class="header-actions">
+          <!-- Mobile Search Toggle Button (Visible only on mobile) -->
+          <button class="header-icon-btn mobile-search-toggle" id="btnMobileSearchToggle" aria-label="Toggle Search Input">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <button class="btn-request-quote" id="btnOpenQuoteModal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Request Quote
+          </button>
+
+          <button class="header-icon-btn" id="btnCart" aria-label="View Shopping Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count-badge" id="cartBadge">0</span>
+          </button>
+
+          <button class="header-icon-btn" id="btnThemeToggle" aria-label="Toggle Dark/Light Mode">
+            <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Account Badge (Avatar at far top-right corner on mobile) -->
+          <div class="account-pill" id="btnAccount" title="Acct #4092 Enterprise Tier">
+            <div class="account-avatar" style="background: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80') center/cover;"></div>
+            <div class="account-info">
+              <span class="account-id">Acct #4092</span>
+              <span class="account-tier">Enterprise Tier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SUB-NAVIGATION BAR (ALWAYS VISIBLE & STICKY ON SCROLL) -->
+    <nav class="sub-nav-bar" id="subNavBar">
+      <div class="container">
+        <ul class="sub-nav-list">
+          <li class="sub-nav-item"><a href="index.html">Home</a></li>
+          <li class="sub-nav-item active"><a href="catalog.html">Hardware Catalog</a></li>
+          <li class="sub-nav-item"><a href="index.html#products">Printers & Copiers</a></li>
+          <li class="sub-nav-item"><a href="index.html#toners">Ink & Toners</a></li>
+          <li class="sub-nav-item"><a href="index.html#pos">POS Solutions</a></li>
+          <li class="sub-nav-item"><a href="index.html#advantage">B2B Enterprise</a></li>
+          <li class="sub-nav-item"><a href="index.html#showroom">About Store</a></li>
+          <li class="sub-nav-item"><a href="index.html#contact">Contact & Support</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       CATALOG HERO & BREADCRUMB
+       ======================================================================== -->
+  <main class="container">
+    <div class="catalog-breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="crumb-sep">›</span>
+      <span>Hardware & Printers Catalog</span>
+    </div>
+
+    <!-- Catalog Page Header -->
+    <section class="catalog-header-section">
+      <div class="catalog-header-inner">
+        <div>
+          <div class="catalog-title-row">
+            <h1 class="catalog-page-title">Hardware, Commercial Printers & Toners</h1>
+            <span class="catalog-stock-pill">
+              <span class="status-dot-green"></span>
+              500+ In Stock Ready to Ship
+            </span>
+          </div>
+          <p class="catalog-subtitle">
+            Direct OEM distribution pricing for commercial offices, point-of-sale setups, and managed print fleets.
+          </p>
+        </div>
+
+        <div class="express-pickup-card">
+          <div class="express-pickup-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div class="express-pickup-info">
+            <span class="express-pickup-title">2-HOUR EXPRESS · Reserve Express Showroom Pickup</span>
+            <span class="express-pickup-desc">Austin, TX Fleet Staging Center (Exit 248) · In Stock Now</span>
+          </div>
+          <a href="index.html#showroom" class="btn-view-hub">View Hub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Procurement Quick Entry Bar -->
+    <div class="quick-entry-bar">
+      <div class="quick-entry-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+        </svg>
+        <span><strong>Procurement Quick Entry:</strong> Enter master bulk order numbers, paper, or prompt workstation deploy specs for SLA quotes</span>
+      </div>
+
+      <form class="quick-entry-form" id="quickEntryForm" onsubmit="event.preventDefault();">
+        <input type="text" class="quick-sku-input" id="quickSkuInput" placeholder="Enter SKU (e.g. EP-ETM, CF289X)..." required>
+        <input type="number" class="quick-qty-input" id="quickQtyInput" value="1" min="1" max="999">
+        <button type="submit" class="btn-quick-add" id="btnQuickAdd">+ Add</button>
+        <button type="button" class="btn-csv-order" onclick="document.getElementById('btnOpenQuoteModal').click()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          CSV Order
+        </button>
+      </form>
+    </div>
+
+    <!-- ========================================================================
+         CATALOG MAIN LAYOUT (SIDEBAR + PRODUCT GRID)
+         ======================================================================== -->
+    <div class="catalog-main-layout">
+      <!-- LEFT SIDEBAR: FILTERS -->
+      <aside class="catalog-sidebar">
+        <div class="filter-header-row">
+          <div class="filter-header-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+            Filter Specs
+          </div>
+          <span class="btn-reset-filters" id="btnResetFilters">Reset All</span>
+        </div>
+
+        <!-- Flagship Showroom Toggle -->
+        <div class="flagship-toggle-box">
+          <div>
+            <div class="flagship-toggle-label">Flagship Showroom</div>
+            <div class="flagship-toggle-sub">Filter by in-person pickup</div>
+          </div>
+          <div class="toggle-switch" id="flagshipToggle" aria-label="Toggle Showroom Only"></div>
+        </div>
+
+        <!-- 1. Equipment Class -->
+        <div class="filter-section-block">
+          <div class="filter-section-title">EQUIPMENT CLASS</div>
+          <ul class="filter-options-list">
+            <li class="filter-option-item active" data-class="all">
+              <span>✓ All IT Equipment</span>
+              <span class="filter-count-badge">128</span>
+            </li>
+            <li class="filter-option-item" data-class="printers">
+              <span>Multi-Function Printers</span>
+              <span class="filter-count-badge">42</span>
+            </li>
+            <li class="filter-option-item" data-class="toners">
+              <span>Toners & Solid Ink Units</span>
+              <span class="filter-count-badge">52</span>
+            </li>
+            <li class="filter-option-item" data-class="pos">
+              <span>POS & Thermal Receipts</span>
+              <span class="filter-count-badge">18</span>
+            </li>
+            <li class="filter-option-item" data-class="scanners">
+              <span>Barcode & Handhelds</span>
+              <span class="filter-count-badge">11</span>
+            </li>
+            <li class="filter-option-item" data-class="workstations">
+              <span>Commercial Workstations</span>
+              <span class="filter-count-badge">5</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Authorized Brand -->
+        <div class="filter-section-block">
+          <div class="filter-section-title">AUTHORIZED BRAND</div>
+          <ul class="filter-options-list">
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox" checked>
+                <span>Epson Fleet Direct</span>
+              </label>
+              <span class="filter-count-badge">31</span>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox" checked>
+                <span>Canon Solutions</span>
+              </label>
+              <span class="filter-count-badge">25</span>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox" checked>
+                <span>HP Enterprise</span>
+              </label>
+              <span class="filter-count-badge">42</span>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>Zebra Technologies</span>
+              </label>
+              <span class="filter-count-badge">14</span>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>Honeywell Scanning</span>
+              </label>
+              <span class="filter-count-badge">9</span>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>Brother Pro</span>
+              </label>
+              <span class="filter-count-badge">7</span>
+            </li>
+          </ul>
+
+          <div class="filter-pill-tags-row">
+            <span class="filter-tag-pill active">Perfect OEM (128)</span>
+            <span class="filter-tag-pill">Tier-1 Direct</span>
+            <span class="filter-tag-pill">Eco Tank</span>
+            <span class="filter-tag-pill">Direct Thermal</span>
+          </div>
+        </div>
+
+        <!-- 3. Print Capacity (PPM) -->
+        <div class="filter-section-block">
+          <div class="filter-section-title">PRINT CAPACITY (PPM)</div>
+          <ul class="filter-options-list">
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>10 – 25 Pages/min (Light Studio)</span>
+              </label>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox" checked>
+                <span>26 – 50 Pages/min (Enterprise)</span>
+              </label>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>45+ High-Volume Batch</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. Interface & Protocol -->
+        <div class="filter-section-block">
+          <div class="filter-section-title">INTERFACE & PROTOCOL</div>
+          <ul class="filter-options-list">
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox" checked>
+                <span>Gigabit Ethernet (802.1Q)</span>
+              </label>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>Dual-Band Wi-Fi & AirPrint</span>
+              </label>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>USB 3.1 / USB-A Direct</span>
+              </label>
+            </li>
+            <li class="filter-option-item">
+              <label class="filter-checkbox-wrap">
+                <input type="checkbox">
+                <span>Serial RS-232/POS legacy</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 5. Price Range Slider -->
+        <div class="filter-section-block">
+          <div class="price-range-slider-wrap">
+            <div class="price-range-header">
+              <span>PRICE RANGE</span>
+              <span id="priceDisplay">$45 — $1,199</span>
+            </div>
+            <input type="range" class="price-slider-input" min="45" max="1199" value="1199" id="priceRangeInput">
+            <div class="price-slider-limits">
+              <span>Min: $45</span>
+              <span>Max: $1,199</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Direct OEM Warranty Box -->
+        <div class="sidebar-warranty-card">
+          <div class="warranty-card-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Direct OEM Warranty
+          </div>
+          <p class="warranty-card-desc">
+            All toner cartridges, printers, and scanners supplied through Office One feature certified holographic serial tags and eligible for instant enterprise warranty registration.
+          </p>
+          <div class="warranty-badges-row">
+            <span class="warranty-badge-pill">ISO-9001</span>
+            <span class="warranty-badge-pill">OEM Certified</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT: PRODUCTS -->
+      <section class="catalog-content-col">
+        <!-- Catalog Top Toolbar -->
+        <div class="catalog-toolbar-row">
+          <div class="catalog-sort-group">
+            <span>Sort by:</span>
+            <select class="catalog-sort-select" aria-label="Sort products">
+              <option>Recommended & In-Stock</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Highest PPM Speed</option>
+              <option>Top Rated Enterprise</option>
+            </select>
+          </div>
+
+          <div class="catalog-view-controls">
+            <div class="b2b-tier-toggle-pill">
+              <span>B2B Volume Tiers:</span>
+              <strong style="color: var(--color-primary);">[ On ▾ ]</strong>
+            </div>
+            <div class="view-mode-buttons">
+              <button class="view-btn active" aria-label="Grid View">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </button>
+              <button class="view-btn" aria-label="List View">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Showroom Banner Card -->
+        <div class="walkin-banner-card">
+          <img src="assets/showroom.jpg" alt="Office One Tech Center" class="walkin-banner-img">
+          <div class="walkin-banner-body">
+            <span class="walkin-kicker">WALK-IN TECH CENTER · Austin, TX Flagship Showroom & Tech Lab</span>
+            <h2 class="walkin-title">Experience hardware live before ordering fleets</h2>
+            <p class="walkin-desc">
+              Visit our Austin Tech Center to run commercial test prints, evaluate page-yields, and test barcode speeds. Inspect OEM cartridge holograms, test point-of-sale receipt thermal contrast, and speak with an on-site engineer.
+            </p>
+            <div class="walkin-tags-row">
+              <span>🏢 Loading Dock B</span>
+              <span>🛠 Dedicated Tech Technicians</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catalog 9-Cards Grid (3x3) -->
+        <div class="catalog-products-grid">
+          <!-- Card 1: Epson EcoTank L6270 -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-green">EcoTank Pro</span>
+              <span class="catalog-card-sku">SKU: EP-ET16600</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/epson-printer.jpg" alt="Epson EcoTank L6270 Wi-Fi All-in-One Ink Tank System">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">Epson Commercial</span>
+                <span class="catalog-card-rating">★ 4.8 (84)</span>
+              </div>
+              <h3 class="catalog-card-title">Epson EcoTank L6270 Wi-Fi All-in-One Ink Tank System</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">33 PPM Color</span>
+                <span class="spec-pill-item">Auto-Duplex</span>
+                <span class="spec-pill-item">Heat-Free Precision</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$389.00</span>
+                    <span class="catalog-price-strike">$429.00</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="Epson EcoTank L6270">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                    Spec Sheet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Canon imageCLASS MF645Cx -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-blue">Color Laser Pro</span>
+              <span class="catalog-card-sku">SKU: CN-MF645CX</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/canon-printer.jpg" alt="Canon imageCLASS MF645Cx Laser All-in-One Multifunction">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">Canon Solutions</span>
+                <span class="catalog-card-rating">★ 4.9 (61)</span>
+              </div>
+              <h3 class="catalog-card-title">Canon imageCLASS MF645Cx Laser All-in-One Multifunction</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">22 PPM Color</span>
+                <span class="spec-pill-item">Gigabit LAN</span>
+                <span class="spec-pill-item">Secure PIN Print</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$420.00</span>
+                    <span style="font-size: 11px; color: var(--text-muted); margin-left: 4px;">Floor 1 Unit</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 8+ Units</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="Canon imageCLASS MF645Cx">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                    Spec Sheet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: HP LaserJet Pro MFP 4103fdw -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-green">Enterprise Fleet</span>
+              <span class="catalog-card-sku">SKU: HP-M428FDW</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/epson-printer.jpg" alt="HP LaserJet Pro MFP 4103fdw Commercial Wireless Printer" style="filter: grayscale(1);">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">HP Enterprise</span>
+                <span class="catalog-card-rating">★ 4.8 (114)</span>
+              </div>
+              <h3 class="catalog-card-title">HP LaserJet Pro MFP 4103fdw Commercial Wireless Printer</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">42+ PPM B&W</span>
+                <span class="spec-pill-item">PIN Security</span>
+                <span class="spec-pill-item">Dual-PBX Scan</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$499.00</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 12+ In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="HP LaserJet Pro 4103fdw">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                    Spec Sheet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Canon Cartridge 325 -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-green">Best Seller OEM</span>
+              <span class="catalog-card-sku">SKU: CN-CRG325</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/canon-toner-box.jpg" alt="Canon Cartridge 325 Original Black Laser Toner">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">Canon OEM Supplies</span>
+                <span style="font-size: 10px; color: var(--text-muted); font-weight: 600;">1,600 Pages Yield</span>
+              </div>
+              <h3 class="catalog-card-title">Canon Cartridge 325 Original Black Laser Toner</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">Genuine Canon</span>
+                <span class="spec-pill-item">Anti-Leak Seal</span>
+                <span class="spec-pill-item">MF3010 / LBP6000</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$68.00</span>
+                    <span style="font-size: 11px; color: var(--text-muted);">/ unit</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 45+ In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="Canon Cartridge 325">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect></svg>
+                    Bulk (5+)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: HP 89A Toner -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-blue">OEM High Yield</span>
+              <span class="catalog-card-sku">SKU: HP-CF289A</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/hp-toner.jpg" alt="HP 89A (CF289A) Original LaserJet Toner Cartridge">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">HP OEM Supply</span>
+                <span style="font-size: 10px; color: var(--text-muted); font-weight: 600;">5,000 Pages Yield</span>
+              </div>
+              <h3 class="catalog-card-title">HP 89A (CF289A) Original LaserJet Toner Cartridge</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">M507 / M528</span>
+                <span class="spec-pill-item">JetIntelligence</span>
+                <span class="spec-pill-item">Crisp Black</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$72.00</span>
+                    <span style="font-size: 11px; color: var(--text-muted);">/ unit</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 60+ In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="HP 89A Toner">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect></svg>
+                    Bulk (10+)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Zebra ZD220 Barcode Printer -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-blue">Direct POS</span>
+              <span class="catalog-card-sku">SKU: ZEB-ZD220</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/zebra-printer.jpg" alt="Zebra ZD220 4-Inch Commercial Thermal Barcode Printer">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">Zebra Technologies</span>
+                <span class="catalog-card-rating">★ 4.9 (47)</span>
+              </div>
+              <h3 class="catalog-card-title">Zebra ZD220 4-Inch Commercial Thermal Barcode Printer</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">203 DPI Resolution</span>
+                <span class="spec-pill-item">102 mm/s Velocity</span>
+                <span class="spec-pill-item">USB Direct</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$265.00</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 19 In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="Zebra ZD220 Barcode Printer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                    Spec Sheet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Honeywell Voyager 1250g -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-blue">Heavy Industrial</span>
+              <span class="catalog-card-sku">SKU: HON-1250G</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/honeywell-scanner.jpg" alt="Honeywell Voyager 1250g Single-Line Barcode Scanner">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">Honeywell Scanning</span>
+                <span class="catalog-card-rating">★ 4.8 (29)</span>
+              </div>
+              <h3 class="catalog-card-title">Honeywell Voyager 1250g Single-Line Barcode Scanner</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">Extended Depth of Field</span>
+                <span class="spec-pill-item">Plug & Play USB</span>
+                <span class="spec-pill-item">Stand Included</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$115.00</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="Honeywell Voyager Scanner">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                    Spec Sheet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: Epson 003 Ink Pack -->
+          <article class="catalog-card">
+            <div class="catalog-card-header">
+              <span class="catalog-card-pill badge-green">Set of 4 OEM</span>
+              <span class="catalog-card-sku">SKU: EP-003-4PK</span>
+            </div>
+            <div class="catalog-card-img-wrap">
+              <img src="assets/epson-ink-bottles.jpg" alt="Epson 003 Genuine EcoTank 4-Color Ink Bottle Combo Pack">
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-meta">
+                <span class="catalog-card-brand">Epson Master OEM</span>
+                <span style="font-size: 10px; color: var(--text-muted); font-weight: 600;">7,500 Pages Black</span>
+              </div>
+              <h3 class="catalog-card-title">Epson 003 Genuine EcoTank 4-Color Ink Bottle Combo Pack</h3>
+              <div class="catalog-specs-pills">
+                <span class="spec-pill-item">Spill-Free Nozzle</span>
+                <span class="spec-pill-item">L3110 / L3250</span>
+                <span class="spec-pill-item">70 ml Per Bottle</span>
+              </div>
+              <div class="catalog-card-bottom">
+                <div class="catalog-price-row">
+                  <div>
+                    <span class="catalog-price-val">$45.00</span>
+                    <span class="catalog-price-strike">$52.00</span>
+                  </div>
+                  <span class="catalog-stock-indicator">🟢 80+ In Stock</span>
+                </div>
+                <div class="catalog-btn-group">
+                  <button class="btn-catalog-add" data-name="Epson 003 4-Color Ink Set">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Add
+                  </button>
+                  <button class="btn-catalog-spec" onclick="document.getElementById('btnOpenQuoteModal').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect></svg>
+                    Case of 20
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9: Enterprise Branch Promo -->
+          <article class="enterprise-promo-card">
+            <div>
+              <span class="promo-header-kicker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                ENTERPRISE FLEET LEASE
+              </span>
+              <h3 class="promo-title">Equipping an entire corporate branch?</h3>
+              <p class="promo-desc">
+                Skip heavy capital expenditure using automated toner replenishment subscriptions, and certified loaner hardware dispatch under single consolidated monthly billing.
+              </p>
+              <ul class="promo-bullets">
+                <li class="promo-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Fixed cost-per-page SLAs
+                </li>
+                <li class="promo-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Free on-site technician rollout & calibration
+                </li>
+                <li class="promo-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Net-30 and Net-60 procurement terms
+                </li>
+              </ul>
+            </div>
+            <button class="btn-promo-proposal" onclick="document.getElementById('btnOpenQuoteModal').click()">
+              Request Corporate Proposal
+            </button>
+          </article>
+        </div>
+
+        <!-- Pagination Bar -->
+        <div class="catalog-pagination-row">
+          <span class="pagination-info">Showing 1 – 9 of 128 verified hardware items</span>
+          <div class="pagination-controls">
+            <button class="page-btn">‹</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span style="padding: 0 4px; color: var(--text-muted);">...</span>
+            <button class="page-btn">9</button>
+            <button class="page-btn">›</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       4 VALUE GUARANTEE STRIP
+       ======================================================================== -->
+  <section class="value-badges-strip">
+    <div class="container value-badges-grid">
+      <div class="value-badge-box">
+        <div class="value-badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div>
+          <div class="value-badge-title">100% OEM Guarantee</div>
+          <div class="value-badge-desc">Direct serial traceability for counterfeit-free cartridge and hardware deployments.</div>
+        </div>
+      </div>
+
+      <div class="value-badge-box">
+        <div class="value-badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <div>
+          <div class="value-badge-title">Austin Same-Day Fleet Dispatch</div>
+          <div class="value-badge-desc">Orders confirmed by 14:00 dispatch from Austin warehouse for same-day delivery.</div>
+        </div>
+      </div>
+
+      <div class="value-badge-box">
+        <div class="value-badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        </div>
+        <div>
+          <div class="value-badge-title">Net-30 Corporate Invoicing</div>
+          <div class="value-badge-desc">Direct access to Net-30 credit accounts and consolidated MPS contracts.</div>
+        </div>
+      </div>
+
+      <div class="value-badge-box">
+        <div class="value-badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        </div>
+        <div>
+          <div class="value-badge-title">In-House Service & Repair</div>
+          <div class="value-badge-desc">Authorized Epson, HP and Zebra configuration and emergency maintenance support.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       AUTHORIZED DIRECT TIER-1 DISTRIBUTOR RIBBON
+       ======================================================================== -->
+  <section class="distributor-ribbon">
+    <div class="container distributor-inner">
+      <div class="distributor-left">
+        <div class="distributor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
+        <div>
+          <div class="distributor-title">Authorized Direct Tier-1 Distributor</div>
+          <div class="distributor-sub">Genuine products covered by manufacturer official global warranty</div>
+        </div>
+      </div>
+
+      <div class="distributor-brand-list">
+        <span>HP ENTERPRISE</span>
+        <span>•</span>
+        <span>CANON SOLUTIONS</span>
+        <span>•</span>
+        <span>EPSON MASTER</span>
+        <span>•</span>
+        <span>ZEBRA TECHNOLOGIES</span>
+        <span>•</span>
+        <span>DELL PRO</span>
+        <span>•</span>
+        <span>ASUS COMMERCIAL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-columns-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 4px;">
+            <div class="logo-badge">01</div>
+            <div class="logo-text-block">
+              <span class="logo-title">Office One</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Premier enterprise IT equipment vendor, commercial laser fleet partner, POS automation provider, and on-site integration specialists since 2011.
+          </p>
+          <div class="footer-guarantee-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            <div>
+              <strong>Certified Setup Guarantee</strong><br>
+              All enterprise bundles include on-site deployment calibration & 3-year priority SLA response.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">WALK-IN SHOWROOM</h4>
+          <ul class="footer-info-list">
+            <li class="footer-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>
+                <strong>Office One Tech Center, Bldg 4</strong><br>
+                920 Industrial Commerce Parkway<br>
+                Austin, TX 78759
+              </span>
+            </li>
+            <li class="footer-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Loading Dock B (Bulk Commercial Pickups)</span>
+            </li>
+            <li class="footer-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>
+                <strong>Walk-In Demonstrations & Print Benchmarks:</strong><br>
+                Monday - Friday: 08:30 - 18:30 CST
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">PROCUREMENT & SUPPORT</h4>
+          <ul class="footer-links-list">
+            <li><a href="#quoteModal" onclick="document.getElementById('btnOpenQuoteModal').click()">Enterprise Credit Lines & Net-30</a></li>
+            <li><a href="#quoteModal" onclick="document.getElementById('btnOpenQuoteModal').click()">Managed Print Service (MPS) Contracts</a></li>
+            <li><a href="#drivers">POS Hardware Driver Central</a></li>
+            <li><a href="#workstations">Refurbished Certified Workstations</a></li>
+            <li><a href="#rma">Warranty Registration & RMA Portal</a></li>
+            <li><a href="#dispatch">Field Technician Dispatch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">B2B BULLETIN & FLEET RATES</h4>
+          <p class="footer-newsletter-text">
+            Receive weekly commercial hardware surplus listings, OEM rebate notifications, and enterprise volume tier alerts.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault();">
+            <input type="email" class="newsletter-input" placeholder="procurement@company.com" required aria-label="Work Email Address">
+            <button type="submit" class="btn-newsletter-submit">Subscribe</button>
+          </form>
+          <div class="newsletter-privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Zero spam. Confidential corporate communications only.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2025 Office One Solutions Inc. All rights reserved. Registered Federal Commercial Supplier.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Sale</a>
+          <a href="#">SLA Agreements</a>
+          <a href="#">Compliance & ISO-27001</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       LIVE DEMO INTERACTIVE MODALS & TOAST
+       ======================================================================== -->
+  <div class="demo-modal-backdrop" id="quoteModal">
+    <div class="demo-modal-window">
+      <div class="demo-modal-header">
+        <h3>Request Corporate B2B Quote</h3>
+        <button class="modal-close-btn" id="btnCloseQuoteModal" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="demo-modal-body">
+        <form id="corporateQuoteForm" onsubmit="event.preventDefault();">
+          <div class="modal-form-group">
+            <label class="modal-label">Organization Name</label>
+            <input type="text" class="modal-input" placeholder="e.g. Apex Retail Group" required>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-label">Work Email (Net-30 Eligible)</label>
+            <input type="email" class="modal-input" placeholder="procurement@yourdomain.com" required>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-label">Procurement Scope</label>
+            <select class="modal-input">
+              <option>Enterprise Multifunction Fleet (10+ Units)</option>
+              <option>Warehouse POS & Barcode Engines</option>
+              <option>Scheduled OEM Toner Replenishment</option>
+              <option>Bespoke Workstation Provisioning</option>
+            </select>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-label">Target Deployment Date & Notes</label>
+            <textarea class="modal-textarea" rows="3" placeholder="Specify timeline, desired SLA tier, or dock delivery requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary-lg" style="width: 100%; justify-content: center; margin-top: 10px;">
+            Submit RFP / Instant Quote Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toastNotice">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toastMessage">Item reserved successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

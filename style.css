@@ -3929,3 +3929,14 @@ body.dark-mode .quick-entry-left {
   }
 }
 
+/* ==========================================================================
+   PERFORMANCE & RENDERING OPTIMIZATIONS
+   ========================================================================== */
+.section-featured-arrivals,
+.section-reviews,
+.section-showroom-visit {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
+}
+
+
